@@ -5,7 +5,7 @@ import './index.css'
 import { legacy_createStore as createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise';
 import { thunk } from 'redux-thunk';
-import Reducer from './_reducers/index.tsx';
+
 // import 'antd/dist/antd.css';
 
 // ReactDOM.createRoot(document.getElementById('root')!).render(

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import NavBar from "./components/views/NavBar/NavBar";
-import Footer from "./components/views/Footer/Footer";
+// import Footer from "./components/views/Footer/Footer";
 import LandingPage from "./components/views/LandingPage/LandingPage";
 import LoginPage from "./components/views/LoginPage/LoginPage";
 import RegisterPage from "./components/views/RegisterPage/RegisterPage";
@@ -16,7 +16,7 @@ function App() {
               <Route path="/register" element={<RegisterPage />} />
           </Routes>
       </Router>
-      <Footer/>
+      {/* <Footer/> */}
   </>
   )
 }

@@ -21,6 +21,6 @@ export class userList extends BaseEntity {
     password: string;
     
     // QUERY VALUE - ts
-    @OneToMany( type => Ts, ts => ts.user, {eager: true})
-    tss: Ts[];
+    // @OneToMany( type => Ts, ts => ts.user, {eager: true})
+    // tss: Ts[];
 }

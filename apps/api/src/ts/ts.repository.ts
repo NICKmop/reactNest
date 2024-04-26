@@ -29,21 +29,21 @@ export class TsRepository extends Repository<Ts> {
         return this.find({});
     }
 
-    async createTs(createTsDto : CreateTsDto, user: userList) : Promise<Ts>{
-        const { title, description } = createTsDto;
+    // async createTs(createTsDto : CreateTsDto, user: userList) : Promise<Ts>{
+    //     const { title, description } = createTsDto;
         
-        const createTs = this.create({
-            title, description, status:'PUBLIC', user
-        });
+    //     const createTs = this.create({
+    //         title, description, status:'PUBLIC', user
+    //     });
         
-        await this.save(createTs);
+    //     await this.save(createTs);
 
-        return createTs;
-    }
+    //     return createTs;
+    // }
 
-    async deleteTs(tsId : number, user: userList): Promise<void>{
-        this.delete({id: tsId, user});
-    }
+    // async deleteTs(tsId : number, user: userList): Promise<void>{
+    //     this.delete({id: tsId, user});
+    // }
 
     async updateTsStatus(tsId : number, user: userList) : Promise<Ts>{
         let ts = await this.getTsId(tsId);

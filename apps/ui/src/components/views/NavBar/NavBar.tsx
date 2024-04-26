@@ -1,7 +1,7 @@
 function NavBar() {
     return (
         <div>
-            NavBarㄱㄱㄱㄱ
+            CSLEE LOAD PAGE
         </div>
     )
 }

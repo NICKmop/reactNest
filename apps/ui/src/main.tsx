@@ -1,33 +1,25 @@
-import ReactDOM from 'react-dom'
-import App from './App.tsx'
-import { Provider } from 'react-redux';
-import './index.css'
-import { legacy_createStore as createStore, applyMiddleware, compose } from 'redux';
-import promiseMiddleware from 'redux-promise';
-import { thunk } from 'redux-thunk';
+import App from './App.tsx';
+import './index.css';
 
-// import 'antd/dist/antd.css';
+import { createRoot } from 'react-dom/client';
 
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-// )
-declare global{
-  interface Window{
-    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-  }
-}
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, thunk)(createStore);
+const container = document.getElementById('root');
 
-ReactDOM.render(
-    // <App />
-    <Provider store={createStoreWithMiddleware(composeEnhancers)}>
-      <App />
-    </Provider>
-  , document.getElementById('root'));
+const root = createRoot(container!); // TypeScript 사용 시 createRoot(container!)로 적용
 
+root.render(<App />);
 
+// declare global{
+//   interface Window{
+//     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+//   }
+// }
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, thunk)(createStore);
 
-
+// ReactDOM.render(
+//     // <App />
+//     <Provider store={createStoreWithMiddleware(composeEnhancers)}>
+//       <App />
+//     </Provider>
+//   , document.getElementById('root'));

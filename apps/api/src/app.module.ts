@@ -11,7 +11,7 @@ import { typeORMConfig } from './configs/typeorm.config';
 @Module({
   imports: [
     TypeOrmModule.forRoot(typeORMConfig),
-    TsModule, 
+    // TsModule, 
     AuthModule,
   ],
 })

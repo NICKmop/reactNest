@@ -15,6 +15,6 @@ export class Ts extends BaseEntity {
     @Column()
     status: string;
 
-    @ManyToOne(type => userList, userlist => userlist.tss)
-    user: userList;
+    // @ManyToOne(type => userList, userlist => userlist.tss)
+    // user: userList;
 }
